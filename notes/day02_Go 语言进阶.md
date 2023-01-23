@@ -552,6 +552,63 @@ func main() {
 
 ### 6.5 运行
 
+```bash
+$ go run server.go
+```
+
+测试
+
+```bash
+$ curl --location --request GET 'http://0.0.0.0:8080/community/page/get/2' |  jq
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   544  100   544    0     0   450k      0 --:--:-- --:--:-- --:--:--  531k
+{
+  "code": 0,
+  "msg": "success",
+  "data": {
+    "Topic": {
+      "id": 2,
+      "title": "青训营来啦!",
+      "content": "小哥哥，快到碗里来~",
+      "create_time": 1650437640
+    },
+    "PostList": [
+      {
+        "id": 6,
+        "parent_id": 2,
+        "content": "小哥哥快来1",
+        "create_time": 1650437621
+      },
+      {
+        "id": 7,
+        "parent_id": 2,
+        "content": "小哥哥快来2",
+        "create_time": 1650437622
+      },
+      {
+        "id": 8,
+        "parent_id": 2,
+        "content": "小哥哥快来3",
+        "create_time": 1650437623
+      },
+      {
+        "id": 9,
+        "parent_id": 2,
+        "content": "小哥哥快来4",
+        "create_time": 1650437624
+      },
+      {
+        "id": 10,
+        "parent_id": 2,
+        "content": "小哥哥快来5",
+        "create_time": 1650437625
+      }
+    ]
+  }
+}
+```
+
 # 四、总结
 
 + Go: goroutine + channel + sync
