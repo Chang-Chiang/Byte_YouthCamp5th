@@ -821,3 +821,6 @@ func DeleteNote(ctx context.Context, noteID, userID int64) error {
 
 # 五、参考
 
++ [GORM 指南](https://gorm.cn/zh_CN/docs)
++ [Kitex | CloudWeGo](https://www.cloudwego.io/zh/docs/kitex/)
++ [Hertz | CloudWeGo](https://www.cloudwego.io/zh/docs/hertz/)
